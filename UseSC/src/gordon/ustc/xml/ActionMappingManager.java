@@ -44,7 +44,7 @@ public class ActionMappingManager {
                 actionbean.setMethod(ele_class.element("method").getText());
 
                 Map<String, Result> results = new HashMap<String, Result>();
-                //没有匹配资源，响应客户端："没有请求的资源"，需求1。7
+                //没有匹配资源，响应客户端："没有请求的资源"，需求1.7
                 Iterator<Element> ite = ele_action.elementIterator("result");
                 if (ite == null){
                     System.out.println("没有请求的资源");
@@ -67,6 +67,8 @@ public class ActionMappingManager {
         return allActions;
     }
 
+
+    //经典单例设计模式
     private ActionMappingManager(){}
     private static ActionMappingManager manager = null;
 

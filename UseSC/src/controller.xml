@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sc-configuration>
+    <interceptor></interceptor>
     <controller>
         <action>
             <name>login</name>
