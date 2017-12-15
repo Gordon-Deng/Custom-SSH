@@ -34,13 +34,13 @@ public class LogInterceptor {
 
 
 
-    private void preAction() throws InterruptedException {
+    protected void preAction() throws InterruptedException {
         s_Time = System.currentTimeMillis();
         Thread.sleep(1000);
     }
 
 
-    private void afterAction() throws IOException {
+    protected void afterAction() throws IOException {
 
 
         XMLWriter writer = null;

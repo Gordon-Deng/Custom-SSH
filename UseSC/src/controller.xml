@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sc-configuration>
-
-    <interceptor name="Log"> class="water.ustc.interceptor.LogInterceptor"
-        predo="preAction" afterdo="afterAction">
-    </interceptor>
-    
+    <interceptor></interceptor>
     <controller>
         <action>
             <name>login</name>

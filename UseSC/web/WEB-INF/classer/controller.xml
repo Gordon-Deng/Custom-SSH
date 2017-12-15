@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sc-configuration>
+    <interceptor></interceptor>
     <controller>
         <action>
             <name>login</name>
@@ -7,6 +8,9 @@
                 <name>water.ustc.action.LoginAction</name>
                 <method>handleLogin</method>
             </class>
+
+            <interceptor-ref name="Log"></interceptor-ref>
+
             <result>
                 <name>success</name>
                 <type>forward</type>
