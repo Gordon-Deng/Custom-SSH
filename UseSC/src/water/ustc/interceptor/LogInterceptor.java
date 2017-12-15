@@ -4,7 +4,6 @@ import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.io.OutputFormat;
-import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
 
 import java.io.FileWriter;
@@ -45,7 +44,6 @@ public class LogInterceptor {
 
 
         XMLWriter writer = null;
-        SAXReader reader = new SAXReader();
 
         FileWriter output = new FileWriter("/Users/gordon/GitHub/Custom-SSH/UseSC/src/log.xml");
         OutputFormat format = OutputFormat.createPrettyPrint();
