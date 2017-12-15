@@ -41,19 +41,17 @@ public class LogInterceptor {
     }
 
 
-    private void afterAction(){
+    private void afterAction() throws IOException {
 
 
         XMLWriter writer = null;
         SAXReader reader = new SAXReader();
 
-        SimpleDateFormat formattime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
-
+        FileWriter output = new FileWriter("/Users/gordon/GitHub/Custom-SSH/UseSC/src/log.xml");
         OutputFormat format = OutputFormat.createPrettyPrint();
         format.setEncoding("GBK");
+        SimpleDateFormat format_time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-        String path="/Users/gordon/GitHub/Custom-SSH/UseSC/src/log.xml";
         e_Time = System.currentTimeMillis();
         Document doc = DocumentHelper.createDocument();
         Element root = doc.addElement("log");
@@ -63,21 +61,18 @@ public class LogInterceptor {
         name.setText(action_Name);
 
         Element start = action.addElement("s-time");
-        start.setText(formattime.format(s_Time));
+        start.setText(format_time.format(s_Time));
 
         Element end = action.addElement("e-time");
-        end.setText(formattime.format(e_Time));
+        end.setText(format_time.format(e_Time));
 
         Element result = action.addElement("result");
-        result.setText(action_Name);;
+        result.setText(action_Name);
 
-        try {
-            writer = new XMLWriter(new FileWriter(path), format);
-            writer.write(doc);
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        writer = new XMLWriter(output, format);
+        writer.write(doc);
+        writer.close();
+
 
     }
 }
