@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Welcome to J2ee</title>
+    <title>Welcome to J2ee!</title>
 </head>
 <body>
 User:sa17225054
