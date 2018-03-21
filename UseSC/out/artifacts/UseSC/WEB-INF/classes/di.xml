@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sc-di>
+    <!--映射和依赖关系-->
+    <bean id="user" class="Userbean"></bean>
+    <bean id="loginAction" class="loginAction">
+        <field name="userBean" bean-ref="user"></field>
+    </bean>
+    <!--some beans-->
+</sc-di>
